@@ -1,16 +1,11 @@
 class Solution {
     public int countTriples(int n) {
-        int i=1,j,k,c=0;
+        int i=1,c=0;
         while(i<=n){
-            for(j=1;j<=n;j++){
-                if(j!=i){
-                for(k=1;k<=n;k++){
-                    if(k!=j&&k!=i){
-                    if(Math.pow(i,2)+Math.pow(j,2)==Math.pow(k,2)){
-                        c++;
-                    }
-                    }
-                }
+            for(int j=1;j<=n;j++){
+                int t=(int)Math.sqrt(i*i+j*j);
+                if(t<=n&&t!=i&&t!=j&&i!=j&&t*t==i*i+j*j){
+                    c++;
                 }
             }
             i++;
