@@ -7,7 +7,6 @@ int countOdds(int low, int high){
             c++;
         }
         low++;
-    }
-    printf("%d",c);
+    };
     return c;
 }
