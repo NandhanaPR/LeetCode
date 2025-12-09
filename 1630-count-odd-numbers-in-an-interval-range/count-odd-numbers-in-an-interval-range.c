@@ -1,12 +1,5 @@
 
 
 int countOdds(int low, int high){
-    int c=0;
-    while(low<=high){
-        if(low%2!=0){
-            c++;
-        }
-        low++;
-    };
-    return c;
+    return (high+1)/2 -(low/2);
 }
